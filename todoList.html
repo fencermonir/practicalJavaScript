@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+
+    <div>
+        <button onclick="handlers.displayTodos()">Diaplay Todo List</button>
+        <button onclick="handlers.toggleAll()">Toggle All</button>
+    </div>
+    <!-- add todo  -->
+    <div>
+        <button onclick="handlers.addTodo()">Add</button>
+        <input type="text" id="addTodoTextInput">
+    </div>
+    <!-- change todo  -->
+    <div>
+        <button onclick="handlers.changeTodo()">Change todo</button>
+        <input type="number" placeholder="position" id="changeTodoPositionInput">
+        <input type="text" placeholder="Changed text!" id="changeTodoTextInput">
+    </div>
+    <!-- Delete todo -->
+    <div>
+        <button onclick="handlers.deleteTodo()">Delete todo</button>
+        <input type="number" placeholder="position" id="deleteTodoPositionInput">
+    </div>
+    <!-- toggle completed -->
+    <div>
+        <button onclick="handlers.toggleCompleted()">Toggle completed</button>
+        <input type="number" id="toggleCompletedPostionInput">
+    </div>
+
+    <ul></ul>
+    <script src="script.js"></script>
+</body>
+</html>
