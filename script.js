@@ -59,10 +59,8 @@ var handlers = {
         changeTodoTextInput.value = '';
         views.displayTodos();
     },
-    deleteTodo: function(){
-        var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
-        todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
-        deleteTodoPositionInput.value = '';
+    deleteTodo: function(position){
+        todoList.deleteTodo(position);
         views.displayTodos();
     },
     toggleCompleted: function(){
@@ -87,8 +85,29 @@ var views = {
             } else {
                 todoCompletionText = '( ) ' + todo.todoText;
             }
+            todosLi.id = i;
             todosLi.textContent = todoCompletionText;
+            todosLi.appendChild(this.createDeleteButton());
             todosUl.appendChild(todosLi);
         }
+    },
+    createDeleteButton: function() {
+        var deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.className = "deleteButton";
+        return deleteButton;
+    },
+    setUpEventListeners: function() {
+        var todosUl = document.querySelector('ul');
+        todosUl.addEventListener('click',function(event){
+            var eventClicked = event.target;
+            if( eventClicked.className === 'deleteButton' ) {
+                handlers.deleteTodo(parseInt(eventClicked.parentNode.id));
+            }
+        });
     }
 }
+views.setUpEventListeners();
+
+
+

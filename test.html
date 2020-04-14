@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ForEach</title>
+</head>
+<body>
+    <script>
+
+
+       
+
+        // for( var i = 0; i < brother.length; i++ ) {
+        //     console.log(brother[i]);
+        // }
+
+        // function logName(value) {
+        //     console.log( value );
+        // }
+
+        // brother.forEach(logName);
+        var brother = ['monir', 'hasib', 'hasan'];
+
+        function logName(value) {
+            console.log( value );
+        }
+
+        function ourForEach( myArray, myFunction ) {
+            for( var i = 0; i < myArray.length; i++ ) {
+                myFunction(myArray[i]);
+            }
+        }
+        debugger;
+        ourForEach(brother, logName );
+
+
+    </script>
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+
+<script type="text/javascript">
+window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { 
+    L.start({
+        "baseUrl":"mc.us19.list-manage.com",
+        "uuid":"aaff051cee38f2789e8486bad",
+        "lid":"ab09b1463d",
+        "uniqueMethods":true
+        }) 
+    })
+        </script>
+
+
+<script type="text/javascript"
+        src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js"
+        data-dojo-config="usePlainJson: true, isDebug: false"
+        onload="mailchimp()"></script>
+<script type="text/javascript">
+  function mailchimp() {
+    window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {
+      L.start({
+        "baseUrl": "mc.us20.list-manage.com",
+        "uuid": "aaff051cee38f2789e8486bad",
+        "lid": "ab09b1463d",
+        "uniqueMethods": true
+      })
+    })
+  }
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
